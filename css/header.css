@@ -1,0 +1,101 @@
+ @import url('https://fonts.googleapis.com/css2?family=Nova+Round&display=swap');
+html{
+  --standardLogoBg: #0a0129;
+  --headerBg: #e80098;
+}
+.header {
+  background: var(--headerBg);
+  justify-content: space-between;
+  color: #fff
+}
+.header .logo {
+  margin: 10px;
+}
+.header .logo .logoTxt {
+  
+}
+.header .logo .logoImg{
+  margin-right: 10px;
+}
+.header .logo .logoImg img{
+  width: 84px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  background: var(--standardLogoBg);
+  border-radius: 50%;
+}
+.header .menuIcon{
+  margin: 20px;
+  align-items: flex-end;
+}
+.header .menuIcon span{
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #fff;
+  margin: 5px 0;
+}
+.header .menuIcon span::after{
+  position: absolute;
+  content: '';
+  width: 2px;
+  aspect-ratio: 1/1;
+  background: #fff;
+  border-radius: 50%;
+  left: -5px;
+}
+.header .menuIcon span:nth-child(2){
+  width: 15px;
+}
+.header .menuIcon span:nth-child(3){
+  width: 30px;
+}
+
+/* MENU CSS */
+.menuBox{
+  position: fixed;
+  width: 0px;
+  border-radius: 10px;
+  right: 10px;
+  top: 100px;
+  z-index: 100;
+  background: #fff;
+  color: #000c;
+  max-height: calc(100vh - 200px);
+  overflow: auto;
+  transition: all .25s;
+  opacity: 0;
+  z-index: 1000;
+  user-select: none;
+  -webkit-user-select: none;
+  
+}
+.menuBox.active{
+  width: 250px;
+  box-shadow: 0 5px 10px #0001;
+  opacity: 1;
+}
+.menuBox *{
+  transition: all .25s;
+}
+.menuBox .list{
+  height: 1em;
+  padding: 25px;
+  justify-content: flex-end;
+  transition: all .1s;
+}
+.menuBox .list:hover{
+  background: #0001;
+  cursor: pointer;
+}
+.menuBox .list .ico{
+  margin-right: 10px;
+}
+.menuBox .list .menuToShow{
+  transform: scale(.7,1);
+  opacity: 0;
+}
+.menuBox .list .menuToShow.active{
+  transform: scale(1,1);
+  opacity: 1;
+}

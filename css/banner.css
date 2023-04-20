@@ -1,0 +1,100 @@
+.banner{
+  background: var(--headerBg);
+}
+.banner .top{
+  aspect-ratio: 30/9;
+  
+  background: #fff;
+  width: calc(100% - 10px);
+  border-radius: 10px 10px 0 0;
+  margin: 5px 0 00px 0;
+  overflow: hidden;
+}
+.banner .top::after{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background: linear-gradient(#0000,#000d);
+  content: '';
+  bottom: 0;
+}
+.banner .top img{
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.banner .roundBtn{
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  border: 1px;
+  width: 130px;
+  height: 65px;
+  border-radius: 99px 99px 0 0 ;
+}
+
+.banner .roundBtn i{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  left: -10px;
+  bottom: -10px;
+  pointer-events: none;
+}
+.banner .roundBtn i::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-30deg,#1b1209 40%,#0000 50%);
+  border-radius: 50%;
+  left: -10px;
+  top: -10px;
+}
+.banner .roundBtn i:nth-of-type(2)::after{
+  left: 10px;
+  background: linear-gradient(30deg,#1b1209 40%,#0000 50%);
+}
+.banner .roundBtn i:nth-of-type(2){
+  left: 120px;
+}
+.banner .intro{
+  font-size: 2em;
+  position: absolute;
+  bottom: 10px;
+  color: #fff;
+  z-index: 100;
+  color: #fff;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 1200px){
+  .banner .top{
+    aspect-ratio: 21/9;
+  }
+  
+  .banner .intro{
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 900px){
+  .banner .top{
+    aspect-ratio: 16/9;
+  }
+  .banner .intro{
+    font-size: 1em;
+  }  
+}
+@media screen and (max-width: 600px){
+  .banner .intro small{
+    display: none;
+  }
+  .banner .intro{
+    padding: 0 30px;
+  }
+}
