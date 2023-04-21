@@ -1,0 +1,56 @@
+.intro{
+  
+}
+
+.intro .bannerBox{
+  height: 400px;
+  overflow: hidden;
+}
+.intro .bannerBox .spanBx{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  
+  border-radius: 5px 0 5px 0;
+  transform: scale(1.1);
+  opacity: 0;
+  transition: all .25s cubic-bezier(.53,-0.13,.27,1.55) .3s;
+}
+.intro .bannerBox.active .spanBx{
+  transform: scale(1);
+  opacity: 1;
+}
+.intro .bannerBox .spanBx:nth-child(1){
+  left: 9px;
+  top: 9px;
+  border-left: 3px solid #0a0129;
+  border-top: 3px solid #0a0129;
+}
+
+.intro .bannerBox .spanBx:nth-child(2){
+  right: 9px;
+  bottom: 9px;
+  border-right: 3px solid #0a0129;
+  border-bottom: 3px solid #0a0129;
+}
+.intro .bannerBox img{
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  border-radius: 5px;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.1);
+  filter: brightness(2);
+  transition: all .25s;
+}
+.intro .bannerBox.active img{
+  transform: scale(1);
+  opacity: 1;
+  filter: brightness(1);
+}
+@media screen and (max-width: 600px){
+  
+  .intro .bannerBox{
+    height: 300px;
+  }
+}

@@ -28,10 +28,11 @@ body{
   --darkText3: #333;
   --darkText5: #555;
   min-height: 100vh;
-  background: var(--lightBg2);
+  background: #fff;
   font-family: sans-serif;
   width: 100%;
   display: flex;align-items: center;justify-content: flex-start;flex-flow: column;
+  font-family: Quicksand;
 }
 html{ 
   scroll-behavior: smooth;

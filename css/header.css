@@ -1,41 +1,67 @@
- @import url('https://fonts.googleapis.com/css2?family=Nova+Round&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Nova+Round&family=Quicksand:wght@500&display=swap');
 html{
   --standardLogoBg: #0a0129;
-  --headerBg: #e80098;
+  --headerBg: #0a0129;
 }
 .header {
-  background: var(--headerBg);
+  background: #0a0129;
+  color: #fff;
+}
+.header .logoPan .logo img{
+  height: 200px;
+}
+.menuPan{
   justify-content: space-between;
-  color: #fff
+  overflow: auto;
+  font-family: "Nova Round";
+  position: sticky;
+  top: 10px;
+  background: #0a0129;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  z-index: 1;
 }
-.header .logo {
-  margin: 10px;
+.menuPan .menuList{
+  width: calc(100% - 50px);
+  justify-content: flex-start;
+  overflow: auto;
 }
-.header .logo .logoTxt {
+.menuList .menuItem{
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fffd;
+  transition: all .25s;
+  min-width: 150px;
+  height: 50px;
+}
+.menuList .menuItem span{
+  margin: 2px;
+}
+.menuList .menuItem:hover{
+  color: #fff;
+}
+.seeMore{
+  right: 0;
+  top: 0;
+  position: absolute;
+  background: #0a0129;
+  box-shadow: -10px 0 30px #0a0129;
+  align-items: flex-end;
+  width: 60px;
+  height: 50px;
+  padding-right: 15px;
   
 }
-.header .logo .logoImg{
-  margin-right: 10px;
-}
-.header .logo .logoImg img{
-  width: 84px;
-  aspect-ratio: 1/1;
-  object-fit: contain;
-  background: var(--standardLogoBg);
-  border-radius: 50%;
-}
-.header .menuIcon{
-  margin: 20px;
-  align-items: flex-end;
-}
-.header .menuIcon span{
+.seeMore span{
   display: block;
-  width: 40px;
+  width: 30px;
   height: 2px;
   background: #fff;
-  margin: 5px 0;
+  margin: 4px 0;
 }
-.header .menuIcon span::after{
+.seeMore span::after{
   position: absolute;
   content: '';
   width: 2px;
@@ -44,11 +70,11 @@ html{
   border-radius: 50%;
   left: -5px;
 }
-.header .menuIcon span:nth-child(2){
-  width: 15px;
+.seeMore span:nth-child(2){
+  width: 10px;
 }
-.header .menuIcon span:nth-child(3){
-  width: 30px;
+.seeMore span:nth-child(3){
+  width: 18px;
 }
 
 /* MENU CSS */
@@ -57,9 +83,8 @@ html{
   width: 0px;
   border-radius: 10px;
   right: 10px;
-  top: 100px;
   z-index: 100;
-  background: #fff;
+  background: #f1f1ff;
   color: #000c;
   max-height: calc(100vh - 200px);
   overflow: auto;
@@ -68,10 +93,10 @@ html{
   z-index: 1000;
   user-select: none;
   -webkit-user-select: none;
-  
+  border: 2px solid #fff;
 }
 .menuBox.active{
-  width: 250px;
+  width: 300px;
   box-shadow: 0 5px 10px #0001;
   opacity: 1;
 }
@@ -98,4 +123,5 @@ html{
 .menuBox .list .menuToShow.active{
   transform: scale(1,1);
   opacity: 1;
+  text-align: right;
 }
