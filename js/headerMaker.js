@@ -57,10 +57,11 @@ menuItem.forEach(val=>{
 	    <span class="menuToShow material-symbols-outlined">${val[0]}</span>
       <span>${val[1]}</span>
     </div>
-    <div class="lineMargin" w="2px" h="25px" bg="#fff6"></div>`
+    <div class="lineMargin" style="min-width: 1px;" h="25px" bg="#fff8"></div>`
 })
 menuBox.insertAdjacentHTML("afterbegin",html);
 op(".menuList").insertAdjacentHTML("afterbegin",htmlInMenu);
+resetFormat();
 
 function menuToggle(elem){
 	try{
