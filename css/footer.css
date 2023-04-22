@@ -1,0 +1,39 @@
+.footer{
+  
+}
+.footer a{
+}
+.footer .knowUs{
+  margin: 20px;
+  line-height: 1.9em;
+}
+.footer .downSec > div{
+  width: 50%;
+  height: 300px;
+  margin: 20px;
+}
+.footer .downSec .contact{
+  
+  
+}
+.footer .downSec > div a{
+  line-height: 2em;
+  display: block;
+  text-decoration: none;
+  color: #444;
+}
+.footer .downSec .contact .contactMain{
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 600px){
+  .footer .downSec {
+    flex-flow: column;
+  }
+  
+.footer .downSec > div{
+    width: 100%;
+    height: max-content;
+    padding: 20px;
+  }
+}
