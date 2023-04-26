@@ -87,3 +87,15 @@ html{
     --w: 50px;
   }
 }
+
+
+body > * ::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+}body > * ::-moz-scrollbar{
+  width: 0;
+  height: 0;
+}
+body *{
+    scrollbar-width: none;
+}

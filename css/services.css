@@ -1,5 +1,5 @@
 .services{
-  background: radial-gradient(#002a4f,#0a0129);
+  background: radial-gradient(#004160,#0a0129);
   color: #fff;
   padding-top: 20px;
 }
@@ -9,53 +9,59 @@
 .serveBox .serve4{
   flex-flow: row wrap;
   max-width: 498px;
+  width: calc(100% - 20px);
+  aspect-ratio: 5/2;
   margin: 20px;
-  background: #fff;
+  background: #fff1;
+  box-shadow: inset 1px 1px 2px #fff2,
+    inset -1px -1px 2px #fff2;
   border-radius: 10px;
-  
-}
-.serveBox .serve4 .serve{
-  margin: 20px;
-  border-radius: 11px;
-  border: 4px solid #444;
   overflow: hidden;
 }
-.serveBox .serve4 .serve p{
-  position: absolute;
+.serve4 .scrollPanel{
+  height: 100%;
+}
+.serve4 .scrollPanel scrollbar{
+  width: none;
+  height: none;
+}
+.serve4 .scrBar{
+  height: 100%;
+  overflow: hidden;
+  position: sticky;
   left: 0;
-  bottom: 0;
-  background: #000;
-  color: #fffe;
-  padding: 30px 5px 5px 5px;
-  border-radius: 0 0 5px 5px;
-  background: linear-gradient(#0000,#000);
+  top: 0;
 }
-.serveBox .serve4 .serve img{
-  width: 200px;
-  aspect-ratio: 1/1;
-  border-radius: 8px;
+.serve4 .scrBar *{
+  transition: all .5s;
+}
+.serve4 .scrBar .scr{
+  background: #fff;
+  width: 80%;
+  aspect-ratio: 5/2;
+  position: absolute;
+  transition: left .5s;
+  border-radius: 10px;
+}
+.serve4 .scrBar .scrLeft,
+.serve4 .scrBar .scrRight{
+  transform: scale(.8);
+  opacity: .8;  
+}
+.serve4 .scrBar .scrRight{
+  left: 86%;
+}
+.serve4 .scrBar .scrLeft{
+  left: -66%;
+}
+.serve4 .scrBar .scr img{
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  transition: all .25s;
-}
-.serveBox .serve4 .serve:hover img{
-  transition: all .45s cubic-bezier(.25,.36,0,1.35);
-  transform: scale(1.3);
-  filter: brightness(1.2);
-}
-.serveBox .serve4 .serve:hover p{
-  color: #fff;
 }
 
 @media screen and (max-width: 570px){
   .serveBox .serve4{
-    width: 360px;
     margin: 20px 5px;
-  }
-  .serveBox .serve4 .serve{
-    margin: 10px;
-  }
-  .serveBox .serve4 .serve img{
-    width: 150px;
-  }
-  
+  } 
 }
