@@ -5,31 +5,35 @@
 }
 .serveBox{
   flex-flow: row wrap;
+  margin-bottom: 56px;
 }
 .serveBox .serve4{
   flex-flow: row wrap;
   max-width: 498px;
-  width: calc(100% - 20px);
-  aspect-ratio: 5/2;
-  margin: 20px;
+  width: calc(100% - 40px);
+  margin: 40px;
   background: #fff1;
   box-shadow: inset 1px 1px 2px #fff2,
     inset -1px -1px 2px #fff2;
   border-radius: 10px;
-  overflow: hidden;
 }
 .serve4 .scrollPanel{
-  height: 100%;
+  height: 100%;  
+}
+.serve4 .scrollPanel .catName{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.4em;
 }
 .serve4 .scrollPanel scrollbar{
   width: none;
   height: none;
 }
 .serve4 .scrBar{
-  height: 100%;
-  overflow: hidden;
-  position: sticky;
+  width: calc(100% - 20px);
+  aspect-ratio: 5/2;
   left: 0;
+  margin: 10px;
   top: 0;
 }
 .serve4 .scrBar *{
@@ -37,28 +41,54 @@
 }
 .serve4 .scrBar .scr{
   background: #fff;
-  width: 80%;
-  aspect-ratio: 5/2;
+  color: #000;
+  height: 100%;
+  width: 100%;
   position: absolute;
   transition: left .5s;
   border-radius: 10px;
+  opacity: 0;
+  transform: scale(1);
+  transition: all .25s;
+ }
+.serve4 .scrBar .scr.active{
+  opacity: 1;
+  transform: scale(1);
 }
-.serve4 .scrBar .scrLeft,
-.serve4 .scrBar .scrRight{
-  transform: scale(.8);
-  opacity: .8;  
-}
-.serve4 .scrBar .scrRight{
-  left: 86%;
-}
-.serve4 .scrBar .scrLeft{
-  left: -66%;
-}
+
 .serve4 .scrBar .scr img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
+  .serve4 .scrBar .scr p{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(#0000,var(--standardLogoBg));
+    color: #fff;
+    padding: 30px 10px 10px 10px;
+    font-size: 1.3em;
+  }
+.serve4 .scrollPanel .handle{
+  position: absolute;
+  top: 50%;
+  width: calc(100% + 40px);
+  justify-content: space-between;
+  pointer-events: none;  
+}
+.serve4 .scrollPanel .handle .ico{
+  width: 40px;
+  backdrop-filter: blur(5px);
+  pointer-events: auto;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff2;
+  border: 1px solid #fff;
+  box-shadow: 0 0 6px #0005;
+}
+
 
 @media screen and (max-width: 570px){
   .serveBox .serve4{

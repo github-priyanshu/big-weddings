@@ -1,69 +1,74 @@
-var elemAry=[]
 var scrollPanel=opp(".scrollPanel");
-log(scrollPanel);
 
-scrollPanel.forEach(val=>{
-	resetScroller(val);
-	var doing=true,
-	defaultScroll=val.scrollLeft;
-	var n=0;
-	val.onscroll=(e)=>{
-		var x=setTimeout(()=>{
-			doing=true;
-			resetScroller(val);
-		},250);
+var htmlSer=`
 
-		if(doing){
-			clearTimeout(x);
-			var sign=Math.sign(defaultScroll - val.scrollLeft);
-			if(sign)
-				changeActive(sign,val);
-		}
+<div class="lineMargin" m="30px"></div>
+<div class="services flex c w100p">
+  <h1>Our Expertise..!! <span class="material-symbols-outlined">settings_suggest</span></h1>
 
-		doing=false;
-	}
-})
-function resetScroller(elem){
-	doing=false;
-	setTimeout(()=>{doing=true},250);
-	elem.scrollTo(elem.offsetWidth/2,0);	
+  <div class="lineMargin" m="10px"></div>
+
+  <div class="serveBox flex w100p">
+`;
+for(let val in menuData){
+	htmlSer+=`
+
+    <div class="serve4">
+
+      <div class="scrollPanel flex c w100p">
+        
+        <div class="catName">${val}</div>
+        
+        <div class="scrBar w100p flex">
+    `;
+    var cl='active',n=0;
+
+    for(let sal of menuData[val]){
+    	htmlSer+=`<div class="scr ${cl}" bnrN='${n++}'>
+    		<img src="img/services/${sal}.png" alt="banner ${sal}">
+    		<p class="w100p texCen">${sal}</p>
+    	</div>`;
+    	cl='';
+    }
+    htmlSer+=`
+        </div>
+        <div class="handle flex">
+          <div class="ico flex" onclick="changescr(-1,this,${n})">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </div>
+          <div class="ico flex" onclick="changescr(1,this,${n})">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </div>
+
+      </div>
+    </div>`;
 }
+htmlSer+=`
+  </div>
 
-function changeActive(sign,val){
-	val.classList.add("thisisscrolled");
-	
-	var main=op(".thisisscrolled .scr.scrMain"),
-	left=op(".thisisscrolled .scr.scrLeft"),
-	right=op(".thisisscrolled .scr.scrRight");
+</div>`;
 
-	val.classList.remove("thisisscrolled");
+document.body.insertAdjacentHTML("beforeend",htmlSer);
 
+function changescr(term,elem,total){
+	var parent=elem.parentElement.previousElementSibling;
+	parent.classList.add('active');
 
-	if(sign<0){
-		main.style.left='-66%';
-		right.style.left='10%';
-		left.style.left='-100%';
+	var elemAry=parent.children;
+	log(elemAry);
 
-		main.classList.remove('scrMain');
-		main.classList.add('scrLeft');
+	var targetPrev=op(".scrBar.active .scr.active"),targetPrevN=Number(targetPrev.getAttribute('bnrN')),
+	targetN=(targetPrevN+term)%total;
+	if(targetN<0)
+		targetN=total-1;
 
-		right.classList.remove("scrRight");
-		right.classList.add("scrMain");
+	target=op(`.scrBar.active .scr[bnrN='${targetN}']`);
 
-		left.classList.remove("scrLeft");
-		left.classList.add("noshow");
-	}else{
-		main.style.left='86%';
-		right.style.left='100%';
-		left.style.left='10%';
+	log(targetPrevN,targetPrev,target);
 
-		main.classList.remove('scrMain');
-		main.classList.add('scrRight');
+	targetPrev.classList.remove("active");
+	target.classList.add('active');
 
-		right.classList.remove("scrRight");
-		right.classList.add("noshow");
-
-		left.classList.remove("scrLeft");
-		left.classList.add("scrMain");
-	}
+	parent.classList.remove('active');
 }
