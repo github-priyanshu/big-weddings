@@ -9,9 +9,9 @@
 }
 .serveBox .serve4{
   flex-flow: row wrap;
-  max-width: 498px;
+  max-width: 600px;
   width: calc(100% - 40px);
-  margin: 40px;
+  margin: 50px;
   background: #fff1;
   box-shadow: inset 1px 1px 2px #fff2,
     inset -1px -1px 2px #fff2;
@@ -48,12 +48,12 @@
   transition: left .5s;
   border-radius: 10px;
   opacity: 0;
-  transform: scale(1);
+  transform: translateY(4px);
   transition: all .25s;
  }
 .serve4 .scrBar .scr.active{
   opacity: 1;
-  transform: scale(1);
+  transform: translateY(-0px);
 }
 
 .serve4 .scrBar .scr img{
@@ -70,23 +70,23 @@
     color: #fff;
     padding: 30px 10px 10px 10px;
     font-size: 1.3em;
+    border-radius: 0 0 10px 10px;
   }
 .serve4 .scrollPanel .handle{
   position: absolute;
   top: 50%;
-  width: calc(100% + 40px);
+  width: calc(100% - 20px);
   justify-content: space-between;
   pointer-events: none;  
 }
 .serve4 .scrollPanel .handle .ico{
   width: 40px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px) drop-shadow(0 0 3px #000;);
   pointer-events: auto;
   height: 40px;
   border-radius: 50%;
-  background: #fff2;
-  border: 1px solid #fff;
-  box-shadow: 0 0 6px #0005;
+  
+  background: radial-gradient(#0003 10%,#0000 80%);
 }
 
 

@@ -36,7 +36,7 @@ for(let val in menuData){
           <div class="ico flex" onclick="changescr(-1,this,${n})">
             <ion-icon name="chevron-back-outline"></ion-icon>
           </div>
-          <div class="ico flex" onclick="changescr(1,this,${n})">
+          <div class="ico flex autoForwarderServices" onclick="changescr(1,this,${n})">
             <ion-icon name="chevron-forward-outline"></ion-icon>
           </div>
         </div>
@@ -51,12 +51,26 @@ htmlSer+=`
 
 document.body.insertAdjacentHTML("beforeend",htmlSer);
 
+var autoServBtn=opp(".autoForwarderServices"),autoFn=autoServBtn.length,curAutoN=0;
+
+setInterval(()=>{
+	var tim=0;
+	autoServBtn.forEach(val=>{
+		setTimeout(()=>{
+			var y=val.getClientRects()[0];
+			if(y > 0 && y<window.innerHeight){
+				val.click()
+			}
+		},tim);
+		tim+=150;
+	})
+},3000)
+
 function changescr(term,elem,total){
 	var parent=elem.parentElement.previousElementSibling;
 	parent.classList.add('active');
 
 	var elemAry=parent.children;
-	log(elemAry);
 
 	var targetPrev=op(".scrBar.active .scr.active"),targetPrevN=Number(targetPrev.getAttribute('bnrN')),
 	targetN=(targetPrevN+term)%total;
@@ -64,8 +78,6 @@ function changescr(term,elem,total){
 		targetN=total-1;
 
 	target=op(`.scrBar.active .scr[bnrN='${targetN}']`);
-
-	log(targetPrevN,targetPrev,target);
 
 	targetPrev.classList.remove("active");
 	target.classList.add('active');
