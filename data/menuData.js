@@ -9,4 +9,9 @@ var menuData=
 
 "Make Up & Attire": ["Bridal Attire","Groom Attire","Jewellery","Nails"],
 
+"Video & Photography": ["Pre-Wedding Shoot","Latest Fashion Photoes","Awesome Videography"],
+
+"Cook & Catering": ['Cook Arrangement','Non-Veg','Veg'],
+
+"Culture": ["Punjabi","Bihari","Bengali","Marathi","Tamil","Kashimiri"]
 }
