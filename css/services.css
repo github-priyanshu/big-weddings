@@ -48,12 +48,10 @@
   transition: left .5s;
   border-radius: 10px;
   opacity: 0;
-  transform: translateY(4px);
   transition: all .25s;
  }
 .serve4 .scrBar .scr.active{
   opacity: 1;
-  transform: translateY(-0px);
 }
 
 .serve4 .scrBar .scr img{

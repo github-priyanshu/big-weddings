@@ -4,7 +4,19 @@ var footHtml=`
   <div class="knowUs">
     <h2>About <b>Big Weddings</b></h2>
     <div class="lineMargin" m='10px'></div>
-    <p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Corporis minus, rem atque harum recusandae? Molestiae, quasi eligendi, omnis nobis eum eveniet dicta sit libero veritatis voluptatem facilis nulla incidunt. Optio, error? Iusto sed accusamus iure itaque culpa minima placeat consequuntur!</p>
+    <p>Over the years, Big Weddings has expanded its services beyond Ranchi and has now become a national-level service provider. Big Weddings has set up branches in various cities across the country and has
+been catering to couples from different cultural backgrounds. Despite the expansion, we perfectly
+manage to maintain local flair and provide clients with an authentic experience of the local culture
+wherever they go.
+<br>
+<br>
+One of the unique selling points of Big Weddings is the ability to personalize the services according to
+the client's requirements. We take time to understand the client's preferences, budget, and cultural
+background to create a bespoke experience that is tailored to the needs.
+<br>
+<br>
+If you're planning a wedding and want an authentic local experience with a touch of elegance and
+sophistication across the country, Big Weddings might just be the perfect choice for you.</p>
   </div>
   <div class="downSec flex w100p">
 

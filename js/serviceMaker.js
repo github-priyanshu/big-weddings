@@ -58,8 +58,6 @@ setInterval(()=>{
 	autoServBtn.forEach(val=>{
 		setTimeout(()=>{
 			var y=val.getClientRects()[0].y;
-			log(y,window.innerHeight)
-			log(y > 0 && y<window.innerHeight)
 			if(y > 0 && y<window.innerHeight){
 				val.click()
 			}

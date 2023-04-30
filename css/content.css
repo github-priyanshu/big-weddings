@@ -1,21 +1,21 @@
 .content{
 	padding: 10px;
 	background: #fff;
-	width: calc(100% - 400px);
+	width: calc(100% - 300px);
 	background: radial-gradient(ellipse at 50% 80%, #ffcef5,#ffefd6);
 	border-radius: 5px;
 	padding: 50px 0;
 }
 .content .contentTxt{
 	line-height: 2em;
-	font-size: 1.3em;
-	max-width: 600px;
+	font-size: 1.2em;
+	max-width: 660px;
 }
 .content .contentImg img{
 	background: #fff;
 	border-radius: 10px;
 	margin-left: 100px;
-	width: 500px;
+	width: 600px;
 }
 
 @media screen and (max-width: 1655px){
