@@ -1,4 +1,4 @@
-document.body.insertAdjacentHTML('beforeend',`<div class="intro w100p flex c">
+document.body.insertAdjacentHTML('beforeend',`<!---<div class="intro w100p flex c">
   <div class="bannerBox w100p flex">
     <div class="spanBx"></div>
     <div class="spanBx"></div>
@@ -7,6 +7,7 @@ document.body.insertAdjacentHTML('beforeend',`<div class="intro w100p flex c">
 
   </div>
 </div>
+--->
 
 <link rel="stylesheet" href="css/content.css">
 <div class="lineMargin" m="30px"></div>

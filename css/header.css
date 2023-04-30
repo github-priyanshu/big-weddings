@@ -1,14 +1,35 @@
  @import url('https://fonts.googleapis.com/css2?family=Nova+Round&family=Quicksand:wght@500&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@500&family=Nova+Round&family=Quicksand:wght@500&display=swap');
 html{
-  --standardLogoBg: #0a0129;
-  --headerBg: #0a0129;
+  --standardLogoBg: #e72e77;
+  --headerBg: #e72e77;
 }
 .header {
-  background: #0a0129;
+  background: url("https://image.wedmegood.com/resized/1900X/uploads/city_bg_image/1/delhi_bg.jpeg");
   color: #fff;
+  height: 500px;
+  background-position: center;
+  overflow: hidden;
+}
+.header .topTxt .left,
+.header .topTxt .right{
+  width: 50%;
+  font-family: Big Shoulders Stencil Display;
+}
+.header .logoPan{
+  height: 320px;  
+  width: 200px;
+  position: absolute;
+  bottom: -90px;
+  border-radius: 200px 200px 0 0;
+  overflow: hidden;
+  width: max-content;
 }
 .header .logoPan .logo img{
-  height: 200px;
+  height: 300px;
+  top: -20px;
+  background: var(--headerBg);
 }
 .menuPan{
   justify-content: space-between;
@@ -16,7 +37,7 @@ html{
   font-family: "Nova Round";
   position: sticky;
   top: 10px;
-  background: #0a0129;
+  background: #e72e77;
   position: -webkit-sticky;
   position: sticky;
   top: -1px;
@@ -46,8 +67,8 @@ html{
   right: 0;
   top: 0;
   position: absolute;
-  background: #0a0129;
-  box-shadow: -10px 0 30px #0a0129;
+  background: #e72e77;
+  box-shadow: -10px 0 30px #e72e77;
   align-items: flex-end;
   width: 60px;
   height: 50px;

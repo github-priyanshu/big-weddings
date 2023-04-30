@@ -1,6 +1,6 @@
 .services{
-  background: radial-gradient(#004160,#0a0129);
-  color: #fff;
+  background: #f1f1ff;
+  color: #000;
   padding-top: 20px;
 }
 .serveBox{
@@ -12,9 +12,8 @@
   max-width: 600px;
   width: calc(100% - 40px);
   margin: 50px;
-  background: #fff1;
-  box-shadow: inset 1px 1px 2px #fff2,
-    inset -1px -1px 2px #fff2;
+  background: #fff;
+  box-shadow: inset 1px 1px 2px #fff2, inset -1px -1px 2px #fff2,0 5px 50px #0003;
   border-radius: 10px;
 }
 .serve4 .scrollPanel{
@@ -64,7 +63,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    background: linear-gradient(#0000,var(--standardLogoBg));
+    background: linear-gradient(#0000,#0f0f0f);
     color: #fff;
     padding: 30px 10px 10px 10px;
     font-size: 1.3em;

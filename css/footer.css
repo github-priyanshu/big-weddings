@@ -3,6 +3,10 @@
 }
 .footer a{
 }
+
+.footer a *{
+  margin: 0 5px;
+}
 .footer .knowUs{
   margin: 20px;
   line-height: 1.9em;
@@ -18,9 +22,10 @@
 }
 .footer .downSec > div a{
   line-height: 2em;
-  display: block;
   text-decoration: none;
   color: #444;
+  text-align: left;
+  justify-content: flex-start;
 }
 .footer .downSec .contact .contactMain{
   align-items: flex-start;
