@@ -92,9 +92,10 @@ function menuToggle(elem){
 
 }
 
-function autoCloseMenu(){
+function autoCloseMenu(e){
+	log(e)
 	log('came to auto clos')
-	if(menuBox.classList.contains('active')){
+	if(menuBox.classList.contains('active') && e.pageX!=0 ){
 		menuToggle();
 	}
 }
