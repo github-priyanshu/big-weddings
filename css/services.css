@@ -91,9 +91,25 @@
   line-height: 1.7em;
   font-weight: lighter;
   height: 200px;
-  overflow: auto;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  padding-bottom: 10px;
 }
-
+.serve4 .readMore{
+  position: absolute;
+  bottom: 0;
+  padding: 20px 0px 10px 0px ;
+  background: linear-gradient(#0000,#fff 50%);
+  pointer-events: none;
+  border-radius: 0 0 10px 10px;
+}
+.serve4 .readMore button{
+  pointer-events: auto;
+  font-weight: bold;
+  color: #444;
+  padding: 10px;
+}
 
 @media screen and (max-width: 570px){
   .serveBox .serve4{

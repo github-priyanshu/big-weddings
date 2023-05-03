@@ -44,6 +44,9 @@ for(let val in menuData){
       </div>
 
       <p col="#555" class="desc" >${menuData[val].desc}</p>
+      <div class="readMore flex w100p">
+      	<button class="noBtn" onclick="readmore(this.parentElement.previousElementSibling,this)">READ MORE</button>
+      </div>
     </div>`;
 }
 htmlSer+=`
@@ -85,4 +88,10 @@ function changescr(term,elem,total){
 	target.classList.add('active');
 
 	parent.classList.remove('active');
+}
+
+function readmore(elem,me){
+	me.remove();
+	elem.style.overflow="auto";
+	elem.scrollBy(0,100);
 }
