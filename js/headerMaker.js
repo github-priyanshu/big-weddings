@@ -1,8 +1,8 @@
 document.body.insertAdjacentHTML('afterbegin',`
   <div class="header flex c w100p">
-  	<div class="topTxt w100p flex" fs="5em" style="background: linear-gradient(#000,#0000); position: absolute; top: 0;">
+  	<div class="topTxt w100p flex" style="background: linear-gradient(#000,#0000); position: absolute; top: 0;">
   		<div class="left" style="text-align: right;">Big Weddings</div>
-  		<div class="lineMargin" m="0 30px" bg="#fff" w="4px" h="50px" style="border-radius: 5px"></div>
+  		<div class="lineMargin" m="var(--topTxHeadLineMargin)" bg="#fff" w="4px" h="var(--topTxHeHei)" style="border-radius: 5px"></div>
   		<div class="right">Wedding Planner</div>
   	</div>
     <div class="logoPan w100p flex">

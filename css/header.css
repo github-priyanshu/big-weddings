@@ -12,24 +12,38 @@ html{
   background-position: center;
   overflow: hidden;
 }
+
+.header .topTxt{
+  font-size: 5em;
+}
+.header .topTxt .lineMargin{
+  --topTxHeadLineMargin: 30px;
+  --topTxHeHei: 40px;
+}
 .header .topTxt .left,
 .header .topTxt .right{
   width: 50%;
   font-family: Big Shoulders Stencil Display;
 }
 .header .logoPan{
-  height: 320px;  
-  width: 200px;
+  --logoSize: 320px;
+  aspect-ratio: 10/8;
+  width: var(--logoSize);
   position: absolute;
-  bottom: -90px;
-  border-radius: 200px 200px 0 0;
+  bottom: calc(-1* var(--logoSize) /5);
+  border-radius: calc(var(--logoSize)/2) calc(var(--logoSize)/2) 0 0;
   overflow: hidden;
-  width: max-content;
+}
+
+.header .logoPan .logo{
+  width: 100%;
+  background: var(--headerBg);
+  height: 100%;
 }
 .header .logoPan .logo img{
-  height: 300px;
-  top: -20px;
+  top: -10px;
   background: var(--headerBg);
+  height: 100%;
 }
 .menuPan{
   justify-content: space-between;
@@ -37,7 +51,7 @@ html{
   font-family: "Nova Round";
   position: sticky;
   top: 10px;
-  background: #e72e77;
+  background: var(--headerBg);
   position: -webkit-sticky;
   position: sticky;
   top: -1px;
@@ -67,8 +81,8 @@ html{
   right: 0;
   top: 0;
   position: absolute;
-  background: #e72e77;
-  box-shadow: -10px 0 30px #e72e77;
+  background: var(--headerBg);
+  box-shadow: -10px 0 30px var(--headerBg);
   align-items: flex-end;
   width: 60px;
   height: 50px;
@@ -91,12 +105,13 @@ html{
   border-radius: 50%;
   left: -5px;
 }
+/*
 .seeMore span:nth-child(2){
   width: 10px;
 }
 .seeMore span:nth-child(3){
   width: 18px;
-}
+} */
 
 /* MENU CSS */
 .menuBox{
@@ -145,4 +160,45 @@ html{
   transform: scale(1,1);
   opacity: 1;
   text-align: right;
+}
+@media screen and (max-width: 1000px){
+  
+  .header .topTxt{
+    font-size: 4em;
+  }
+  
+  .header .logoPan{
+    --logoSize: 220px;
+  }
+}
+@media screen and (max-width: 900px){
+  
+  .header .topTxt{
+    font-size: 3em;
+  }
+  
+  .header .logoPan{
+    --logoSize: 220px;
+  }
+}
+@media screen and (max-width: 700px){
+  
+  .header .topTxt{
+    font-size: 1.8em;
+  }
+  
+  .header .logoPan{
+    --logoSize: 160px;
+  }
+  .header{
+    height: 250px;
+  }
+  .header .topTxt .lineMargin{
+    --topTxHeadLineMargin: 10px;
+    --topTxHeHei: 20px;
+  }
+  .header .logoPan .logo img{
+    top: -5px;
+  }
+  
 }

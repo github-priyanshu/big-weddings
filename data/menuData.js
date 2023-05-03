@@ -14,4 +14,5 @@ var menuData=
 "Cook & Catering": ['Cook Arrangement','Non-Veg','Veg'],
 
 "Culture": ["Punjabi","Bihari","Bengali","Marathi","Tamil","Kashimiri"]
+
 }

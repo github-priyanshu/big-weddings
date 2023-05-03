@@ -1,0 +1,28 @@
+.contactorBx{
+  position: fixed;
+  bottom: 100px;
+  background: var(--headerBg);
+  width: 160px;
+  height: 90px;
+  border-radius: 99px;
+  color: #fff;
+  transform: translateY(20px) scale(.8);
+  opacity: 0;
+  pointer-events: none;
+  transition: all .2s;
+}
+.contactorBx.active{
+  transform: translateY(0px) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+.contactorBx a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3em;
+}
+.contactorBx .social .ico{
+  aspect-ratio: 1/1;
+  width: 19px;
+  margin: 5px 8px;
+}
