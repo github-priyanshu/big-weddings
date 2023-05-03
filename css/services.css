@@ -63,11 +63,11 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    background: linear-gradient(#0000,#0f0f0f);
-    color: #fff;
+    background: linear-gradient(#0000,#fff);
+    color: #000;
     padding: 30px 10px 10px 10px;
     font-size: 1.3em;
-    border-radius: 0 0 10px 10px;
+/*     border-radius: 0 0 10px 10px; */
   }
 .serve4 .scrollPanel .handle{
   position: absolute;
@@ -84,6 +84,14 @@
   border-radius: 50%;
   
   background: radial-gradient(#0003 10%,#0000 80%);
+}
+.serve4 .desc{
+  width: calc(100% - 20px);
+  margin: 0 10px 10px 10px;
+  line-height: 1.7em;
+  font-weight: lighter;
+  height: 200px;
+  overflow: auto;
 }
 
 

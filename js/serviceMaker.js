@@ -23,7 +23,7 @@ for(let val in menuData){
     `;
     var cl='active',n=0;
 
-    for(let sal of menuData[val]){
+    for(let sal of menuData[val].subCat){
     	htmlSer+=`<div class="scr ${cl}" bnrN='${n++}'>
     		<img src="img/services/${sal}.png" alt="banner ${sal}">
     		<p class="w100p texCen">${sal}</p>
@@ -42,6 +42,8 @@ for(let val in menuData){
         </div>
 
       </div>
+
+      <p col="#555" class="desc" >${menuData[val].desc}</p>
     </div>`;
 }
 htmlSer+=`
