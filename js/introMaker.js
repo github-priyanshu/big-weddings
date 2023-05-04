@@ -14,7 +14,7 @@ document.body.insertAdjacentHTML('beforeend',`<!---<div class="intro w100p flex 
 <div class="content flex">
 
 	<div class="contentTxt">
-	  <h1 col="#444"><span class="material-symbols-outlined">star</span> Welcome Dear.</h1>
+	  <h1 col="#444"><span class="material-symbols-outlined">star</span> Big Weddings.</h1>
 	  <div class="lineMargin" m="15px"></div>
 	  <p col="#555" fs="1.1em">Big Weddings, a wedding service provider company, based at Ranchi roots in the local culture yet has a
 national presence with a vast experience of 15 years of organizing events of various kinds. "Big
@@ -31,13 +31,3 @@ clients' expectations.</p>
 
 </div>`);
 resetFormat();
-
-var introBanner=op("#introBanner");
-log(introBanner)
-introBanner.onload=loadIntro;
-introBanner.onloadeddata=loadIntro;
-
-function loadIntro(){
-	op(".bannerBox").classList.add('active');
-}
-setTimeout(loadIntro,1000);

@@ -25,20 +25,11 @@ document.body.insertAdjacentHTML('afterbegin',`
 </div>`)
 
 
-var menuItem=[
-	[`add_a_photo`,"Photography & Video"],
-	[`face`,"Make Up"],
-	[`woman_2`,"Bridal Wear"],
-	[`boy`,"Groom Wear"],
-	[`back_hand`,"Mehndi"],
-	[`distance`,"Venue"],
-	[`next_plan`,"Planning & Decore"],
-	[`restaurant`,"Food"],
-	[`redeem`,"Invites & Gifts"],
-	[`music_note`,"Music & Dance"],
-	[`diamond`,"Jewellery & Accessories"],
-	[`temple_hindu`,"Pandits"],
-],
+var menuItem=[];
+
+for(let val in menuData){
+	menuItem.push([menuData[val].ico, val]);
+}
 menuBox=op(".menuBox");
 
 menuBox.style.height=menuItem.length*53+4+"px";
@@ -98,4 +89,13 @@ function autoCloseMenu(e){
 	if(menuBox.classList.contains('active') && e.pageX!=0 ){
 		menuToggle();
 	}
+}
+autoScrollHeaderMenu();
+function autoScrollHeaderMenu(){
+	var headerMenuListBx=op(".menuPan .menuList");
+	window.addEventListener('scroll',()=>{
+		log('j')
+		var percent=window.scrollY/(document.body.offsetHeight-window.innerHeight);
+		headerMenuListBx.scrollTo(headerMenuListBx.scrollWidth*percent,0);
+	})
 }

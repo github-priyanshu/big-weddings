@@ -61,6 +61,11 @@ html{
   width: calc(100% - 50px);
   justify-content: flex-start;
   overflow: auto;
+/*   scroll-behavior: smooth; */
+/*   -webkit-scroll-behavior: smooth; */
+}
+body{
+/*   display: none; */
 }
 .menuList .menuItem{
   padding: 10px;
