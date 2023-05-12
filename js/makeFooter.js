@@ -24,13 +24,17 @@ sophistication across the country, Big Weddings might just be the perfect choice
       <h2>Contact Us <span class="material-symbols-outlined">contact_support</span></h2>
 
       <div class="contactMain">
-        <a target="__blank" href="tel:+91 803 103 0003" class="conItem flex">
+        <a target="__blank" href="tel:${phone[0]}" class="conItem flex">
           <span class="material-symbols-outlined">call</span>
-          <span>+91 803 103 0003</span>
+          <span>${phone[0]}</span>
         </a>
-        <a target="__blank" href="mailto:help@bigweddings.net" class="conItem flex">
+        <a target="__blank" href="tel:${phone[1]}" class="conItem flex">
+          <span class="material-symbols-outlined">call</span>
+          <span>${phone[1]}</span>
+        </a>
+        <a target="__blank" href="mailto:${email}" class="conItem flex">
           <span class="material-symbols-outlined">mail</span>
-          <span>help@bigweddings.net</span>
+          <span>${email}</span>
         </a>
       </div>
 
@@ -40,27 +44,27 @@ sophistication across the country, Big Weddings might just be the perfect choice
       <h2>Follow Us <span class="material-symbols-outlined">link</span></h2>
 
       <div class="followMain">
-        <a target="__blank" href="https://facebook.com/bigweddings" class="followItem flex ">
+        <a target="__blank" href="${social.facebook}" class="followItem flex ">
           <ion-icon name="logo-facebook"></ion-icon>
           facebook
         </a>
-        <a target="__blank" href="https://twitter.com/bigweddings" class="followItem flex ">
+        <a target="__blank" href="${social.twitter}" class="followItem flex ">
           <ion-icon name="logo-twitter"></ion-icon>
           twitter
         </a>
-        <a target="__blank" href="https://linkedin.com/bigweddings" class="followItem flex ">
+        <a target="__blank" href="${social.linkedin}" class="followItem flex ">
           <ion-icon name="logo-linkedin"></ion-icon>
           linkedin
         </a>
-        <a target="__blank" href="https://pinterest.com/bigweddings" class="followItem flex ">
+        <a target="__blank" href="${social.pinterest}" class="followItem flex ">
           <ion-icon name="logo-pinterest"></ion-icon>
           pinterest
         </a>
-        <a target="__blank" href="https://instagram.com/bigweddings" class="followItem flex ">
+        <a target="__blank" href="${social.instagram}" class="followItem flex ">
           <ion-icon name="logo-instagram"></ion-icon>
           instagram
         </a>
-        <a target="__blank" href="https://youtube.com/bigweddings" class="followItem flex ">
+        <a target="__blank" href="${social.youtube}" class="followItem flex ">
           <ion-icon name="logo-youtube"></ion-icon>
           youtube
         </a>

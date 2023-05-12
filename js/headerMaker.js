@@ -38,19 +38,23 @@ menuBox.style.height=menuItem.length*53+4+"px";
 var html="",htmlInMenu="";
 menuItem.forEach(val=>{
 	html+=`<div class="list flex">
-		<div class="ico flex">
-			<span class="menuToShow material-symbols-outlined">${val[0]}</span>
-			<div class="dot menuToAnim"></div>
-		</div>
-		<div class="menuTxt">
-			<p class="menuToShow">${val[1]}</p>
-			<div class="bar menuToAnim" style="width: ${val[1].length}px;"></div>
-		</div>
+		<a href="undercons/index.html" class="flex">
+			<div class="ico flex">
+				<span class="menuToShow material-symbols-outlined">${val[0]}</span>
+				<div class="dot menuToAnim"></div>
+			</div>
+			<div class="menuTxt">
+				<p class="menuToShow">${val[1]}</p>
+				<div class="bar menuToAnim" style="width: ${val[1].length}px;"></div>
+			</div>
+		</a>
 	</div>`;
 	htmlInMenu+=`
     <div class="menuItem flex" style="min-width: max-content">
-	    <span class="menuToShow material-symbols-outlined">${val[0]}</span>
-      <span>${val[1]}</span>
+    	<a href="undercons/index.html" class="flex" style="text-decoration: none;">
+		    <span class="menuToShow material-symbols-outlined">${val[0]}</span>
+	      <span>${val[1]}</span>
+      </a>
     </div>
     <div class="lineMargin" style="min-width: 1px;" h="25px" bg="#fff8"></div>`
 })

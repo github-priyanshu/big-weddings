@@ -96,6 +96,10 @@
   -webkit-scroll-behavior: smooth;
   padding-bottom: 10px;
 }
+.serve4 .desc span{
+  margin-bottom: 17px;
+  display: block;
+}
 .serve4 .readMore{
   position: absolute;
   bottom: 0;

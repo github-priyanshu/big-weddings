@@ -24,7 +24,8 @@ menuItem.forEach(val=>{
 			<div class="bar menuToAnim" style="width: ${val[1].length}px;"></div>
 		</div>
 	</div>`;
-})
+});
+
 menuBox.insertAdjacentHTML("afterbegin",html);
 
 function menuToggle(){
